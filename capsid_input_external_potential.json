@@ -1,0 +1,83 @@
+{
+    "_id": {
+        "$oid": "5f6a3420946df6f79477da2f"
+    },
+    "comments": "cored ico and spherocylinder",
+    "group_id": "16004646682118680477PT",
+    "parameters": {
+        "edges": {
+            "type1": {
+                "bending_modulus": {
+                    "type1": 30.0
+                },
+                "e_b": {
+                    "type1": -3.2
+                },
+                "stretch_mod": 300.0,
+                "theta0": {
+                    "type1": 0.347
+                },
+                "l0": 1.0
+            }                
+
+        },
+        "mesh_parameters": {
+            "kT": 1.0,            
+            "d_max": 0.2,
+            "R_add": 0.2,     
+            "l_fuse": 0.5,                   
+            "L_neighbor": 1.2,
+            "k_fusion": 0.001,
+            "k_fusion2": 0.0001,
+            "k_fusion_edge": 0.01,
+            "k_vertex_move":0.1
+        },
+        "subunits": {
+            "sub1": {
+                "edges": {
+                    "edge1": "type1",
+                    "edge2": "type1",
+                    "edge3": "type1"
+                },
+                "k_insertion": 0.005,
+                "mu": -17.0,
+                "number_of_rotational_configs": 1,
+                "R_exc": 0.2
+            }
+           
+        },
+        "run_parameters":{
+            "init_file":"hexamer_subunit_plane_triangle_non_removable_fixed.om",
+            "init_file_pos": 0,
+            "data_folder": "/home/btyukodi/testdatafolder/low_kb_test/data/",
+            "path_to_source":"",            
+            "timesteps": 31000000000,
+            "max_seconds":100000,
+            "dtsave": 50000,
+            "dtsave_snapshot":500000,
+            "dtskip": 0,
+            "ensemble": 71337,
+            "spring_const": 0.5,
+            "nsteps_umbrella":1000000,
+            "dN_umbrella":1,
+            "adaptive_rates":false, 
+            "convert_to_lammps":false,
+            "convert_to_vtk":false,
+            "convert_to_lammps_trajectory":false,
+            "convert_to_dat":false,
+            "dt_burnin":10000,
+            "Nmax": 2000,
+	    "continue_if_possible":false,
+            "checkpoint_freq":10000,
+            "stop_at_closure":true,
+            "externalpotential":"MorsePotential",
+            "extparam1":0.0,
+            "extparam2":2.5,
+            "extparam3":1.66,
+            "extparam4":1.5,
+            "extparam5":10.0,
+            "extparam6":0.0            
+        }
+    },
+    "status": "parall_temp?"
+}
