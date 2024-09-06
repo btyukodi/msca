@@ -1,5 +1,18 @@
 The code needs to be compiled against OpenMesh9.0 available at https://www.graphics.rwth-aachen.de/software/openmesh/
 
+The compilation process should generate the Assembly executable.
+ A simple dynamical run takes a flag -d and an input json file: ./Assembly -d -i T7.json
+ The .json input file contains all the simulation running parameters including subunit design and run parameters.
+
+ Simulations output a data_log.dat text file with several instantaneous data values and a binary file, snapshots.om containing full snapshots of the structure.
+ These binary files may be converted to Lammps and VTK formats for visualization and analysis using ./Assembly -c snapshots.om -f folder_for_snapshot_files/
+
+ Simulations are initialized from structures also stored in .om files. A vertices.dat-faces.dat-edges.dat text file triplet may be used to convert to such an .om file using
+ ./Assembly -g datfiles_folder/ -o structure.om   
+
+ The folder init_structures/ contains multiple initializer files which may be specified for use in the .json input file, in the "init_file" parameter.
+ It is a good idea to use full paths to all files and folders when providing them as command line arguments to ./Assembly 
+
 The .json file specifies the full input and defines the subunit design, assembly conditions, metaparameters and data dump parameters. The following flags are currently available for running:
  
  ./Assembly -d -i input_carlos2.json --> dynamical run
