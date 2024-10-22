@@ -42,3 +42,7 @@ The .json file specifies the full input and defines the subunit design, assembly
  ./Assembly -T -i input_carlos2.json --> thermodynamic integration
  
  ./Assembly -i omfile.om -b 803215 -A omfile_to_append_to.om --> append snapshot from position b in omfile.om to the file in omfile_to_append_to.om
+
+
+
+This project has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 01026118 and from NSF through the Brandeis Center for Bioinspired Soft Materials, an MRSEC (DMR-2011846) and DMR-2309635. 
